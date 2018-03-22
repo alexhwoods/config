@@ -4,6 +4,9 @@ export EDITOR="$VISUAL"
 
 # ZSH Settings
 ZSH_THEME="bullet-train"
+BULLETTRAIN_HIDE_NODE="true"
+
+
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 

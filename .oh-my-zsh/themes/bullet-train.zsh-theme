@@ -548,6 +548,10 @@ prompt_virtualenv() {
 
 # NVM: Node version manager
 prompt_nvm() {
+  if [[ -n $BULLETTRAIN_HIDE_NODE ]]; then
+    return
+  fi
+
   local nvm_prompt
   if type nvm >/dev/null 2>&1; then
     nvm_prompt=$(nvm current 2>/dev/null)
