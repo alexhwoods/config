@@ -387,7 +387,7 @@ prompt_custom() {
     return
   fi
 
-  local custom_msg='define custom message here 😁 '
+  local custom_msg=${BULLETTRAIN_CUSTOM_MSG}
   [[ -n "${custom_msg}" ]] && prompt_segment $BULLETTRAIN_CUSTOM_BG $BULLETTRAIN_CUSTOM_FG "${custom_msg}"
 }
 

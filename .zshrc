@@ -5,6 +5,7 @@ export EDITOR="$VISUAL"
 # ZSH Settings
 ZSH_THEME="bullet-train"
 BULLETTRAIN_HIDE_NODE="true"
+BULLETTRAIN_CUSTOM_MSG="☀️ "
 
 
 HYPHEN_INSENSITIVE="true"
