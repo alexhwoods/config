@@ -21,7 +21,6 @@ if [ ! -n "${BULLETTRAIN_PROMPT_ORDER+1}" ]; then
     time
     status
     custom
-    context
     dir
     screen
     perl
@@ -221,16 +220,6 @@ if [ ! -n "${BULLETTRAIN_PERL_PREFIX+1}" ]; then
   BULLETTRAIN_PERL_PREFIX=🐪
 fi
 
-# CONTEXT
-if [ ! -n "${BULLETTRAIN_CONTEXT_BG+1}" ]; then
-  BULLETTRAIN_CONTEXT_BG=black
-fi
-if [ ! -n "${BULLETTRAIN_CONTEXT_FG+1}" ]; then
-  BULLETTRAIN_CONTEXT_FG=default
-fi
-if [ ! -n "${BULLETTRAIN_CONTEXT_HOSTNAME+1}" ]; then
-  BULLETTRAIN_CONTEXT_HOSTNAME=%m
-fi
 
 # GIT PROMPT
 if [ ! -n "${BULLETTRAIN_GIT_PREFIX+1}" ]; then
@@ -363,14 +352,6 @@ prompt_end() {
 # to be shown
 # ------------------------------------------------------------------------------
 
-# Context: user@hostname (who am I and where am I)
-context() {
-  local user="$(whoami)"
-  [[ "$user" != "$BULLETTRAIN_CONTEXT_DEFAULT_USER" || -n "$BULLETTRAIN_IS_SSH_CLIENT" ]] && echo -n "${user}@$BULLETTRAIN_CONTEXT_HOSTNAME"
-}
-
-prompt_context() {}
-
 # Based on http://stackoverflow.com/a/32164707/3859566
 function displaytime {
   local T=$1
@@ -474,9 +455,6 @@ prompt_hg() {
 # Dir: current working directory
 prompt_dir() {
   local dir=''
-  local _context="$(context)"
-  [[ $BULLETTRAIN_DIR_CONTEXT_SHOW == true && -n "$_context" ]] && dir="${dir}${_context}:"
-
   if [[ $BULLETTRAIN_DIR_EXTENDED == 0 ]]; then
     #short directories
     dir="${dir}%1~"
