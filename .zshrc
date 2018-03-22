@@ -6,6 +6,7 @@ export EDITOR="$VISUAL"
 ZSH_THEME="bullet-train"
 BULLETTRAIN_HIDE_NODE="true"
 BULLETTRAIN_CUSTOM_MSG="☀️ "
+VIRTUAL_ENV=" 🦊 "
 
 
 HYPHEN_INSENSITIVE="true"
