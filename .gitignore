@@ -3,6 +3,8 @@
 !.vimrc
 !.zshrc
 !.oh-my-zsh/
+!.oh-my-zsh/lib
+!.oh-my-zsh/lib/git.zsh
 .oh-my-zsh/.gitignore
 !.oh-my-zsh/themes/
 !.oh-my-zsh/themes/bullet-train.zsh-theme
