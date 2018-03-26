@@ -393,7 +393,7 @@ prompt_custom() {
 
 # Git
 prompt_git() {
-  if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" == "1" ]]; then
+  if [[ $(command git config --get oh-my-zsh.hide-status 2>/dev/null) ]]; then
     return
   fi
 
