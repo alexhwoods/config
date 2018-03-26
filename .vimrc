@@ -22,3 +22,5 @@ filetype plugin indent on    " required
 syntax enable
 set background=dark
 colorscheme solarized
+
+set tabstop=4
