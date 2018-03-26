@@ -10,7 +10,7 @@ VIRTUAL_ENV=" 🦊 "
 
 
 HYPHEN_INSENSITIVE="true"
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 plugins=(
   git
