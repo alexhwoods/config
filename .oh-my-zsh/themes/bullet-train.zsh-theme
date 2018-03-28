@@ -473,6 +473,9 @@ prompt_dir() {
 # RBENV: shows current ruby version active in the shell; also with non-global gemsets if any is active
 # CHRUBY: shows current ruby version active in the shell
 prompt_ruby() {
+  if [[ -n $BULLETTRAIN_HIDE_RUBY ]]; then
+    return
+  fi
   if command -v rvm-prompt > /dev/null 2>&1; then
     prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX" $(rvm-prompt i v g)"
   elif command -v chruby > /dev/null 2>&1; then

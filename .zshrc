@@ -5,6 +5,7 @@ export EDITOR="$VISUAL"
 # ZSH Settings
 ZSH_THEME="bullet-train"
 # BULLETTRAIN_HIDE_NODE="true"
+BULLETTRAIN_HIDE_RUBY="true"
 BULLETTRAIN_CUSTOM_MSG="☀️ "
 VIRTUAL_ENV=" 🦊 "
 
