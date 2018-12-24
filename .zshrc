@@ -1,4 +1,4 @@
-export ZSH=/Users/alexwoods/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
