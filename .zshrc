@@ -4,19 +4,18 @@ export EDITOR="$VISUAL"
 
 # ZSH Settings
 ZSH_THEME="bullet-train"
-# BULLETTRAIN_HIDE_NODE="true"
+BULLETTRAIN_HIDE_NODE="true" # note that NVM is REALLY SLOW
 BULLETTRAIN_HIDE_RUBY="true"
 BULLETTRAIN_CUSTOM_MSG="☀️ "
 VIRTUAL_ENV=" 🦊 "
 
 
 HYPHEN_INSENSITIVE="true"
+# DISABLE_UPDATE_PROMPT=true
 # ENABLE_CORRECTION="true"
 
 plugins=(
   git
-  osx
-  web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -32,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 # Defer initialization of nvm until nvm, node or a node-dependent command is
 # run. Ensure this block is only run once if .bashrc gets sourced multiple times
 # by checking whether __init_nvm is a function.
-if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(type -t __init_nvm)" = function ]; then
+if [ -s "$HOME/.nvm/nvm.sh" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
   declare -a __node_commands=('nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack')
@@ -44,4 +43,3 @@ if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(type -t __init_nvm)" = function ]; then
   }
   for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
 fi
-
